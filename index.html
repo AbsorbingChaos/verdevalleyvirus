@@ -146,6 +146,16 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-alpha/Chart.min.js"></script>
   <script>
+    // load CSV file via D3 then submit to function
+    d3.csv('https://raw.githubusercontent.com/AbsorbingChaos/verdevalleyvirus/master/data/yavapai-county-data.csv').then(makeChart);
+
+    function makeChart(stats) {
+      // stats is an array that represents the CSV
+      console.log(stats[0]);
+      console.log(stats[1]);
+      console.log(stats[2]);
+    }
+
     var ctx = document.getElementById('vvv__chart').getContext('2d');
     var vvv__chart = new Chart(ctx, {
         type: 'bar',
