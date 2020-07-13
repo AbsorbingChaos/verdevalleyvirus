@@ -152,13 +152,15 @@
       console.log(stats[0]);
       console.log(stats[1]);
       console.log(stats[2]);
+      var dateLabels = stats.map(function(d) {return d.Date});
+
     }
 
     var ctx = document.getElementById('vvv__chart').getContext('2d');
     var vvv__chart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
-            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            labels: dateLabels,
             datasets: [{
                 label: '# of Votes',
                 data: [12, 19, 3, 5, 2, 3],
