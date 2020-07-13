@@ -121,20 +121,6 @@
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0-alpha/Chart.min.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
 
-  <script>
-    var chart = new Chart('vvv__chart', {
-      type: 'horizontalBar',
-      data: {
-        labels: ['A', 'B', 'C'],
-        datasets: [
-          {
-            data: [10, 20, 30]
-          }
-        ]
-      }
-    });
-  </script>
-
 </head>
 <body>
 
@@ -150,6 +136,20 @@
   <canvas id="vvv__chart">
 
   </canvas>
+
+  <script>
+    var chart = new Chart('vvv__chart', {
+      type: 'horizontalBar',
+      data: {
+        labels: ['A', 'B', 'C'],
+        datasets: [
+          {
+            data: [10, 20, 30]
+          }
+        ]
+      }
+    });
+  </script>
 
 </body>
 </html>
