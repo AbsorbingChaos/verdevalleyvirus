@@ -241,7 +241,6 @@
   </div>
 
   <div class="vvv__container">
-    <p></p>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
       // first promise returns the dataset
@@ -254,10 +253,6 @@
         function(value) {
           return Promise.all(value.map(
             function(results){
-              for (var i = 0; i < results.length; i++) {
-                console.log(results[i].Date);
-                console.log(results[i].Cottonwood);
-              }
               return [results.Date, results["Ash Fork"], results.Cottonwood];
             }))
         }
