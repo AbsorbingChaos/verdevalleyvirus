@@ -253,14 +253,13 @@
       const citydata = dataset.then(function(value) {
         return Promise.all(value.map(
           function(results){
-             return [results.Date, results.Cottonwood];
+             return [results.Date, results["Ash Fork"], results.Cottonwood];
           }))
       });
       //print the array
       citydata.then(
         function(data) {
           return d3.select("body").append("p").text(data);
-          console.log(data);
         });
     </script>
   </div>
