@@ -241,6 +241,7 @@
   </div>
 
   <div class="vvv__container">
+    <div id="vvv__dataviz"></div>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script>
       // first promise returns the dataset
@@ -265,7 +266,8 @@
       //print the array
       citydata.then(
         function(data) {
-          return d3.select("body").append("p").text(data);
+          // return d3.select("body").append("p").text(data);
+          return d3.select("vvv__dataviz").text(data);
         });
     </script>
   </div>
