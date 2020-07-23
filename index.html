@@ -241,8 +241,28 @@
   </div>
 
   <div class="vvv__container">
+    <p></p>
     <script src="https://d3js.org/d3.v5.min.js"></script>
-    
+    <script>
+      // first promise returns the dataset
+      const dataset = d3.csv("https://raw.githubusercontent.com/AbsorbingChaos/verdevalleyvirus/master/data/yavapai-county-data-cities.csv").then(
+        function(data){
+          return data;
+          });
+      //this promise returns an array with lattitude and longitude
+      const citydata = dataset.then(function(value) {
+        return Promise.all(value.map(
+          function(results){
+             return [results.Date, results.Cottonwood];
+          }))
+      });
+      //print the array
+      citydata.then(
+        function(data) {
+          return d3.select("body").append("p").text(data);
+          console.log(data);
+        });
+    </script>
   </div>
 
   <div class="vvv__footer">
