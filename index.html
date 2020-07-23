@@ -249,13 +249,19 @@
         function(data){
           return data;
           });
-      //this promise returns an array with lattitude and longitude
-      const citydata = dataset.then(function(value) {
-        return Promise.all(value.map(
-          function(results){
-             return [results.Date, results["Ash Fork"], results.Cottonwood];
-          }))
-      });
+      //this promise returns an array with city infection data
+      const citydata = dataset.then(
+        function(value) {
+          return Promise.all(value.map(
+            function(results){
+              for (var i = 0; i < results.length; i++) {
+                console.log(data[i].Date);
+                console.log(data[i].Cottonwood);
+              }
+              return [results.Date, results["Ash Fork"], results.Cottonwood];
+            }))
+        }
+      );
       //print the array
       citydata.then(
         function(data) {
