@@ -255,8 +255,8 @@
           return Promise.all(value.map(
             function(results){
               for (var i = 0; i < results.length; i++) {
-                console.log(data[i].Date);
-                console.log(data[i].Cottonwood);
+                console.log(results[i].Date);
+                console.log(results[i].Cottonwood);
               }
               return [results.Date, results["Ash Fork"], results.Cottonwood];
             }))
