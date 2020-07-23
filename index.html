@@ -253,7 +253,12 @@
         function(value) {
           return Promise.all(value.map(
             function(results){
-              return [results.Date, results["Ash Fork"], results.Cottonwood];
+              return [results.Date, results["Ash Fork"], results.Bagdad,
+              results["Black Canyon City"], results["Camp Verde"], results["Chino Valley"],
+              results.Clarkdale, results.Congress, results.Cornville, results.Cottonwood,
+              results["Dewey-Humboldt"], results.Mayer, results.Paulden, results.Prescott,
+              results["Prescott Valley"], results.Rimrock, results.Sedona, results.Other,
+              results["Quad-Cities"], results.Other, results["Verde Valley"], results.Unknown ];
             }))
         }
       );
