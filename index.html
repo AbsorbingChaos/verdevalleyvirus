@@ -201,7 +201,7 @@
   .serie_label {
     fill: #2b2929;
     font-family: Georgia;
-    font-size: 2em;
+    font-size: 1em;
   }
 
   </style>
@@ -446,7 +446,7 @@
                 return "translate(" + (xScale(d.value.date) + 10)
                 + "," + (yScale(d.value.measurement) + 5 ) + ")"; })
         .attr("x", 5)
-        .text(function(d) { return ("Serie ") + d.id; });
+        .text(function(d) { return d.id; });
 
     });
     </script>
