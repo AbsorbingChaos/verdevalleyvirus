@@ -291,53 +291,6 @@
 
   <div class="vvv__container">
   <script src="https://d3js.org/d3.v5.min.js"></script>
-    <!-- HIDE FIRST EXAMPLE
-    <div id="vvv__dataviz"></div>
-    <script>
-      // first promise returns the dataset
-      const dataset = d3.csv("https://raw.githubusercontent.com/AbsorbingChaos/verdevalleyvirus/master/data/yavapai-county-data-cities.csv").then(
-        function(data){
-          return data;
-          });
-      //this promise returns an array with city infection data
-      const citydata = dataset.then(
-        function(value) {
-          return Promise.all(value.map(
-            function(results){
-              return [
-                results.Date,
-                results["Ash Fork"],
-                results.Bagdad,
-                results["Black Canyon City"],
-                results["Camp Verde"],
-                results["Chino Valley"],
-                results.Clarkdale,
-                results.Congress,
-                results.Cornville,
-                results.Cottonwood,
-                results["Dewey-Humboldt"],
-                results.Mayer,
-                results.Paulden,
-                results.Prescott,
-                results["Prescott Valley"],
-                results.Rimrock,
-                results.Sedona,
-                results.Yarnell,
-                results["Other Quad-Cities"],
-                results["Other Verde Valley"],
-                results.Unknown
-              ];
-            }))
-        }
-      );
-      //print the array
-      citydata.then(
-        function(data) {
-          // return d3.select("body").append("p").text(data);
-          return d3.select("#vvv__dataviz").append("p").text(data);
-        });
-    </script>
-    -->
 
     <!-- TEST SECOND EXAMPLE
     https://datawanderings.com/2019/10/28/tutorial-making-a-line-chart-in-d3-js-v-5/ -->
