@@ -319,7 +319,7 @@
     const width = 960;
     const height = 500;
     const margin = 5;
-    const padding = 5;
+    const padding = 10;
     const adj = 30;
     // we are appending SVG first
     const svg = d3.select("div#container").append("svg")
@@ -327,8 +327,8 @@
         .attr("viewBox", "-"
               + adj + " -"
               + adj + " "
-              + (width + adj *3) + " "
-              + (height + adj*3))
+              + (width + adj * 3) + " "
+              + (height + adj * 3))
         .style("padding", padding)
         .style("margin", margin)
         .classed("svg-content", true);
@@ -362,7 +362,7 @@
 
     //-----------------------------AXES-----------------------------//
     const yaxis = d3.axisLeft()
-        .ticks(5)
+        .ticks(7)
         // .ticks((slices[0].values).length)
         .scale(yScale);
 
