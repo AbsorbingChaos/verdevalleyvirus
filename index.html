@@ -362,7 +362,8 @@
 
     //-----------------------------AXES-----------------------------//
     const yaxis = d3.axisLeft()
-        .ticks((slices[0].values).length)
+        .ticks(10)
+        // .ticks((slices[0].values).length)
         .scale(yScale);
 
     const xaxis = d3.axisBottom()
