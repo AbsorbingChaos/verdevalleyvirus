@@ -360,9 +360,16 @@
         .scale(yScale);
 
     const xaxis = d3.axisBottom()
-        .ticks(d3.timeDay.every(7))
-        .tickFormat(d3.timeFormat('%b %d'))
-        .scale(xScale);
+        // .ticks(d3.timeDay.every(7))
+        // .tickFormat(d3.timeFormat('%m/%d'))
+        // .scale(xScale);
+        // testing answer from stackoverflow since
+        // d3.timeDay.every(x) resets per month
+        // https://stackoverflow.com/questions/49178363/why-does-my-d3-charts-x-axis-include-the-first-of-every-month-as-a-tick-even-th/49178975#49178975
+        // which also references https://github.com/d3/d3/issues/2240#issuecomment-118582280
+        .ticks(d3.timeDay.filter(d=>d3.timeDay.count(0, d) % N === 0))
+        .tickFormat(d3.timeFormat('%m/%d/%y'))
+        .tickSizeOuter(0)
 
     //----------------------------LINES-----------------------------//
     const line = d3.line()
